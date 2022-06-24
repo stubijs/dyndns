@@ -25,7 +25,10 @@ jobs:
       - name: Publish
         run: |
           cd packages/dyndns-worker/
-          wrangler secret put "${{secrets.SECRET_DYN_DNS_01}}"
+          wrangler secret put "CF_EMAIL" "${{secrets.CF_EMAIL}}"
+          wrangler secret put "CF_API_TOKEN" "${{secrets.CF_API_TOKEN}}"
+          wrangler secret put "SECRET_AUTH_TOKEN" "${{secrets.SECRET_AUTH_TOKEN}}"
+          wrangler secret put "SECRET_DYN_DNS_01" "${{secrets.SECRET_DYN_DNS_01}}"
           wrangler publish
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

@@ -40,11 +40,11 @@ export default {
     const url = new URL(request.url)
     if (url.pathname.startsWith('/update/')) {
       // Test Auth Header
-      const headers = new Headers()
+      const headers = request.headers
       let token = headers.get('Authorization')
 
       if (token == null)
-        return new Response('Unknown Auth', { status: 404 })
+        return new Response('No Auth Token', { status: 404 })
 
       token = token.replace(/^Bearer\s+/, '')
       if (token !== env.SECRET_AUTH_TOKEN)

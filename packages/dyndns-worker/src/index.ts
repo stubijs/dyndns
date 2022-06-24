@@ -25,7 +25,6 @@ export interface CloudflareAPIResult {
 interface CloudflareRecordData {
   Typ: string
   URL: string
-  TTL: number
   Proxied: boolean
   ZoneIdentifier: string
   Identifier: string
@@ -71,17 +70,30 @@ export default {
       if (!Object.prototype.hasOwnProperty.call(params, 'reqToken'))
         return new Response('Unknown Token', { status: 404 })
 
+      // No ipv4 or ipv6 Param
+      if (!Object.prototype.hasOwnProperty.call(params, 'ipv4') && !Object.prototype.hasOwnProperty.call(params, 'ipv6'))
+        return new Response('No IP was transferred', { status: 404 })
+
       const reqToken = params.reqToken as string
-      const clientIP = request.headers.get('CF-Connecting-IP') as string | '1.1.1.1'
+      const clientIPv4 = params.ipv4 as string | ''
+      const clientIPv6 = params.ipv6 as string | ''
 
       const data = transformEnvData(env)
       const dataKeys = Object.keys(data)
       if (dataKeys.includes(reqToken)) {
-        const cfResponse = await updateCloudflareRecord(env, clientIP, data[reqToken])
-        if (!cfResponse.success)
-          return new Response(JSON.stringify(cfResponse), { status: 404 })
-        else
-          return new Response('DynDNS Worker updated!', { status: 200 })
+        if (clientIPv4.length > 0) {
+          const cfResponse = await updateCloudflareRecord(env, clientIPv4, data[reqToken])
+          if (!cfResponse.success)
+            return new Response(JSON.stringify(cfResponse), { status: 404 })
+        }
+        if (clientIPv6.length > 0) {
+          const TTLipv6 = 'AAAA'
+          const cfResponse = await updateCloudflareRecord(env, clientIPv6, data[reqToken], TTLipv6)
+          if (!cfResponse.success)
+            return new Response(JSON.stringify(cfResponse), { status: 404 })
+        }
+
+        return new Response('DynDNS Worker updated!', { status: 200 })
       }
       return new Response('Everything OK?! No :-(', { status: 404 })
     }
@@ -102,10 +114,9 @@ function transformEnvData(env: env): EnvData {
       finData[envKeyAry[0]] = {
         Typ: envKeyAry[1],
         URL: envKeyAry[2],
-        TTL: Number(envKeyAry[3]),
-        Proxied: Boolean(envKeyAry[4]),
-        ZoneIdentifier: envKeyAry[5],
-        Identifier: envKeyAry[6],
+        Proxied: Boolean(envKeyAry[3]),
+        ZoneIdentifier: envKeyAry[4],
+        Identifier: envKeyAry[5],
       }
     }
   })
@@ -113,7 +124,7 @@ function transformEnvData(env: env): EnvData {
   return finData
 }
 
-async function updateCloudflareRecord(env: env, ip: string, fetchData: CloudflareRecordData) {
+async function updateCloudflareRecord(env: env, ip: string, fetchData: CloudflareRecordData, ttlVal = 'A') {
   const baseUrl = 'https://api.cloudflare.com/client/v4/'
 
   const zoneIdentifier = fetchData.ZoneIdentifier
@@ -125,7 +136,7 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
     type: fetchData.Typ,
     name: fetchData.URL,
     content: ip,
-    ttl: fetchData.TTL,
+    ttl: ttlVal,
     proxied: fetchData.Proxied,
   }
 

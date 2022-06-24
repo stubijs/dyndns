@@ -23,9 +23,9 @@ export interface CloudflareAPIResult {
 }
 
 interface CloudflareRecordData {
-  Typ: string
   URL: string
   Proxied: boolean
+  TTL: boolean
   ZoneIdentifier: string
   Identifier: string
 }
@@ -112,8 +112,8 @@ function transformEnvData(env: env): EnvData {
     if (item.includes('SECRET_DYN_DNS_')) {
       const envKeyAry = env[item].split('#')
       finData[envKeyAry[0]] = {
-        Typ: envKeyAry[1],
-        URL: envKeyAry[2],
+        URL: envKeyAry[1],
+        TTL: envKeyAry[2],
         Proxied: Boolean(envKeyAry[3]),
         ZoneIdentifier: envKeyAry[4],
         Identifier: envKeyAry[5],
@@ -133,10 +133,10 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
   const fetchUrl = `${baseUrl}zones/${zoneIdentifier}/dns_records/${identifier}`
 
   const data = {
-    type: String(fetchData.Typ),
+    type: String(ttlVal),
     name: String(fetchData.URL),
     content: String(ip),
-    ttl: Number(ttlVal),
+    ttl: Number(fetchData.TTL),
     proxied: Boolean(fetchData.Proxied),
   }
 

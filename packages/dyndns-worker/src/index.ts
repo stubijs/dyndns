@@ -43,7 +43,7 @@ interface env {
 }
 
 export default {
-  async fetch(request: Request, env: env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: env /* , ctx: ExecutionContext */): Promise<Response> {
     const url = new URL(request.url)
     if (url.pathname.startsWith('/update/')) {
       // Test Auth Header
@@ -134,7 +134,7 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
     headers: {
       'Content-Type': 'application/json',
       'X-Auth-Email': env.CF_EMAIL,
-      'X-Auth-Key': env.CF_API_TOKEN,
+      'Authorization': `Bearer ${env.CF_API_TOKEN}`,
     },
     body: JSON.stringify(data),
   }

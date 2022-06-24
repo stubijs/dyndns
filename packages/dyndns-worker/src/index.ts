@@ -47,11 +47,7 @@ export default {
     if (url.pathname.startsWith('/update/')) {
       // Test Auth Header
       const headers = request.headers
-      let token = headers.get('Authorization')
-
-      if (token == null)
-        return new Response('No Auth Token', { status: 404 })
-
+      let token = String(headers.get('Authorization')) || ''
       token = token.replace(/^Bearer\s+/, '')
 
       // Get URL GET Params

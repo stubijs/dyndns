@@ -53,8 +53,6 @@ export default {
         return new Response('No Auth Token', { status: 404 })
 
       token = token.replace(/^Bearer\s+/, '')
-      if (token !== env.SECRET_AUTH_TOKEN)
-        return new Response('Unknown Auth', { status: 404 })
 
       // Get URL GET Params
       const params: RequestParams = {}
@@ -65,6 +63,9 @@ export default {
         if (kv[0])
           params[kv[0]] = kv[1]
       })
+
+      if (token !== env.SECRET_AUTH_TOKEN || (!Object.prototype.hasOwnProperty.call(params, 'pass') && params.pass as string !== env.SECRET_AUTH_TOKEN))
+        return new Response('Unknown Auth', { status: 404 })
 
       // No Token
       if (!Object.prototype.hasOwnProperty.call(params, 'reqToken'))

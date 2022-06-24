@@ -15,6 +15,13 @@
  *
  */
 
+export interface CloudflareAPIResult {
+  success: boolean
+  errors: any[]
+  messages: any[]
+  result: any[]
+}
+
 interface CloudflareRecordData {
   Typ: string
   URL: string
@@ -71,7 +78,10 @@ export default {
       const dataKeys = Object.keys(data)
       if (dataKeys.includes(reqToken)) {
         const cfResponse = await updateCloudflareRecord(env, clientIP, data[reqToken])
-        return new Response(`DynDNS Worker updated! ${cfResponse}`, { status: 200 })
+        if (!cfResponse.success)
+          return new Response(JSON.stringify(cfResponse), { status: 404 })
+        else
+          return new Response('DynDNS Worker updated!', { status: 200 })
       }
       return new Response('Everything OK?! No :-(', { status: 404 })
     }
@@ -129,9 +139,7 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
     body: JSON.stringify(data),
   }
 
-  await fetch(fetchUrl, requestOptions).then((response) => {
-    return JSON.stringify(response.json())
-  }).catch((error) => {
-    return JSON.stringify(error)
-  })
+  const response = await fetch(fetchUrl, requestOptions)
+  const returnData: CloudflareAPIResult = await response.json()
+  return returnData
 }

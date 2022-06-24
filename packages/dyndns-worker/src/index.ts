@@ -64,8 +64,10 @@ export default {
           params[kv[0]] = kv[1]
       })
 
-      if (token !== env.SECRET_AUTH_TOKEN || (!Object.prototype.hasOwnProperty.call(params, 'pass') && params.pass as string !== env.SECRET_AUTH_TOKEN))
-        return new Response('Unknown Auth', { status: 404 })
+      if (token !== env.SECRET_AUTH_TOKEN) {
+        if (!Object.prototype.hasOwnProperty.call(params, 'pass') && params.pass as string !== env.SECRET_AUTH_TOKEN)
+          return new Response('Unknown Auth', { status: 404 })
+      }
 
       // No Token
       if (!Object.prototype.hasOwnProperty.call(params, 'reqToken'))

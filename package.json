@@ -1,0 +1,49 @@
+{
+  "name": "dyndns",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Monorepo for a Cloudflare based DynDns Service. ",
+  "author": "Jan Stubenrauch <info@jstubenrauch.de>",
+  "license": "MIT",
+  "homepage": "http(s)://stubijs.github.io/dyndns",
+  "keywords": [
+    "cloudflare",
+    "vite",
+    "vue",
+    "vue.js",
+    "vue3",
+    "cloudflare worker",
+    "cloudflare pages",
+    "dyndns"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "tsc": "npm-run-all tsc:*",
+    "tsc:dyndns-worker": "pnpm --dir ./packages/dyndns-worker/ ts-check",
+    "tsc:dyndns-page": "pnpm --dir ./packages/dyndns-page/ ts-check",
+    "taze:patch": "npx taze patch -r",
+    "taze:patch:w": "npx taze patch -r -w",
+    "taze:minor": "npx taze minor -r",
+    "taze:minor:w": "npx taze minor -r -w",
+    "taze:major": "npx taze major -r",
+    "taze:major:w": "npx taze major -r -w"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.25.1",
+    "eslint": "8.18.0",
+    "lint-staged": "13.0.2",
+    "npm-run-all": "4.1.5",
+    "simple-git-hooks": "2.8.0",
+    "typescript": "4.7.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix",
+    "*.{md,yaml,toml}": "eslint --fix",
+    "*.{json}": "eslint --fix"
+  }
+}

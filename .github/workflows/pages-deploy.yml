@@ -1,0 +1,27 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          cd packages/dyndns-page/
+          pnpm run docs:build
+          export CLOUDFLARE_API_TOKEN="${{ secrets.CF_API_TOKEN }}"
+          export CLOUDFLARE_ACCOUNT_ID="${{ secrets.CF_ACCOUNT_ID }}"
+          npx wrangler pages publish dist --project-name="dyndns-page"

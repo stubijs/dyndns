@@ -81,11 +81,13 @@ export default {
       const data = transformEnvData(env)
       const dataKeys = Object.keys(data)
       if (dataKeys.includes(reqToken)) {
+        // IPv4 update
         if (clientIPv4 && clientIPv4.length > 0) {
           const cfResponse = await updateCloudflareRecord(env, clientIPv4, data[reqToken])
           if (!cfResponse.success)
             return new Response(JSON.stringify(cfResponse), { status: 404 })
         }
+        // IPv6 update
         if (clientIPv6 && clientIPv6.length > 0) {
           const TTLipv6 = 'AAAA'
           const cfResponse = await updateCloudflareRecord(env, clientIPv6, data[reqToken], TTLipv6)

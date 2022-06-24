@@ -25,8 +25,7 @@ jobs:
       - name: Publish
         run: |
           cd packages/dyndns-worker/
-          wrangler secret put ${{secrets.SECRET_DYN_DNS_01}}
-          wrangler secret put ${{secrets.SECRET_DYN_DNS_02}}
+          wrangler secret put "${{secrets.SECRET_DYN_DNS_01}}"
           wrangler publish
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

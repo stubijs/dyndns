@@ -112,6 +112,7 @@ function transformEnvData(env: env): EnvData {
 
   envKeys.forEach((item) => {
     if (item.includes('SECRET_DYN_DNS_')) {
+      // @ts-expect-error: env item is possible - we use here a limited interface for env
       const envKeyAry = env[item].split('#')
       finData[envKeyAry[0]] = {
         URL: envKeyAry[1],

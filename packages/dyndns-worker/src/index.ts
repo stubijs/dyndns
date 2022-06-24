@@ -70,8 +70,8 @@ export default {
       const data = transformEnvData(env)
       const dataKeys = Object.keys(data)
       if (dataKeys.includes(reqToken)) {
-        ctx.waitUntil(updateCloudflareRecord(env, clientIP, data[reqToken]))
-        return new Response('DynDNS Worker updated!', { status: 200 })
+        const cfResponse = await updateCloudflareRecord(env, clientIP, data[reqToken])
+        return new Response(`DynDNS Worker updated! ${cfResponse}`, { status: 200 })
       }
       return new Response('Everything OK?! No :-(', { status: 404 })
     }
@@ -88,7 +88,7 @@ function transformEnvData(env: env): EnvData {
 
   envKeys.forEach((item) => {
     if (item.includes('SECRET_DYN_DNS_')) {
-      const envKeyAry = item.split('$')
+      const envKeyAry = env[item].split('#')
       finData[envKeyAry[0]] = {
         Typ: envKeyAry[1],
         URL: envKeyAry[2],
@@ -129,11 +129,9 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
     body: JSON.stringify(data),
   }
 
-  await fetch(fetchUrl, requestOptions).then(() => {
-  // eslint-disable-next-line no-console
-    console.log('done')
+  await fetch(fetchUrl, requestOptions).then((response) => {
+    return JSON.stringify(response.json())
   }).catch((error) => {
-  // eslint-disable-next-line no-console
-    console.log('found error', error)
+    return JSON.stringify(error)
   })
 }

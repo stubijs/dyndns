@@ -58,7 +58,7 @@ export default {
 
       // Get URL GET Params
       const params: RequestParams = {}
-      const queryString = url.search.slice(1).split('#')
+      const queryString = url.search.slice(1).split('&')
 
       queryString.forEach((item) => {
         const kv = item.split('=')
@@ -133,11 +133,11 @@ async function updateCloudflareRecord(env: env, ip: string, fetchData: Cloudflar
   const fetchUrl = `${baseUrl}zones/${zoneIdentifier}/dns_records/${identifier}`
 
   const data = {
-    type: fetchData.Typ,
-    name: fetchData.URL,
-    content: ip,
-    ttl: ttlVal,
-    proxied: fetchData.Proxied,
+    type: String(fetchData.Typ),
+    name: String(fetchData.URL),
+    content: String(ip),
+    ttl: Number(ttlVal),
+    proxied: Boolean(fetchData.Proxied),
   }
 
   const requestOptions = {

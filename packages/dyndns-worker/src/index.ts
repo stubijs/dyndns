@@ -52,7 +52,7 @@ export default {
 
       // Get URL GET Params
       const params: RequestParams = {}
-      const queryString = url.search.slice(1).split('&')
+      const queryString = url.search.slice(1).split('#')
 
       queryString.forEach((item) => {
         const kv = item.split('=')

@@ -25,7 +25,7 @@ importers:
       postcss: 8.4.14
       tailwindcss: 3.1.4
       typescript: 4.7.4
-      vite: 2.9.12
+      vite: 2.9.13
       vitepress: 1.0.0-alpha.4
       vue: 3.2.37
       vue-i18n: 9.1.10
@@ -39,7 +39,7 @@ importers:
       postcss: 8.4.14
       tailwindcss: 3.1.4
       typescript: 4.7.4
-      vite: 2.9.12
+      vite: 2.9.13
       vitepress: 1.0.0-alpha.4
       vue-tsc: 0.38.2_typescript@4.7.4
 
@@ -765,14 +765,14 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-vue/2.3.3_vite@2.9.12+vue@3.2.37:
+  /@vitejs/plugin-vue/2.3.3_vite@2.9.13+vue@3.2.37:
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.12
+      vite: 2.9.13
       vue: 3.2.37
     dev: true
 
@@ -4144,8 +4144,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.9.12:
-    resolution: {integrity: sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==}
+  /vite/2.9.13:
+    resolution: {integrity: sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -4175,12 +4175,12 @@ packages:
     dependencies:
       '@docsearch/css': 3.1.0
       '@docsearch/js': 3.1.0
-      '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
+      '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
       '@vue/devtools-api': 6.1.4
       '@vueuse/core': 8.7.5_vue@3.2.37
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.10.1
-      vite: 2.9.12
+      vite: 2.9.13
       vue: 3.2.37
     transitivePeerDependencies:
       - '@types/react'

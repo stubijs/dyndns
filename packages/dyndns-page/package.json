@@ -13,7 +13,7 @@
     "vue-i18n": "9.1.10"
   },
   "devDependencies": {
-    "@vueuse/core": "8.9.2",
+    "@vueuse/core": "8.9.3",
     "autoprefixer": "10.4.7",
     "postcss": "8.4.14",
     "tailwindcss": "3.1.6",

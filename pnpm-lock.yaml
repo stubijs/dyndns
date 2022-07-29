@@ -20,7 +20,7 @@ importers:
 
   packages/dyndns-page:
     specifiers:
-      '@vueuse/core': 8.9.4
+      '@vueuse/core': 9.0.2
       autoprefixer: 10.4.8
       postcss: 8.4.14
       tailwindcss: 3.1.7
@@ -34,7 +34,7 @@ importers:
       vue: 3.2.37
       vue-i18n: 9.1.10_vue@3.2.37
     devDependencies:
-      '@vueuse/core': 8.9.4_vue@3.2.37
+      '@vueuse/core': 9.0.2_vue@3.2.37
       autoprefixer: 10.4.8_postcss@8.4.14
       postcss: 8.4.14
       tailwindcss: 3.1.7
@@ -647,6 +647,10 @@ packages:
     resolution: {integrity: sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==}
     dev: true
 
+  /@types/web-bluetooth/0.0.15:
+    resolution: {integrity: sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA==}
+    dev: true
+
   /@typescript-eslint/eslint-plugin/5.29.0_abk5i7tz6ur3qy3ufsag7eod2u:
     resolution: {integrity: sha512-kgTsISt9pM53yRFQmLZ4npj99yGl3x3Pl7z4eA66OuTzAGC4bQB5H5fuLwPnqTKU3yyrrg4MIhjF17UYnL4c0w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -922,8 +926,24 @@ packages:
       vue-demi: 0.13.1_vue@3.2.37
     dev: true
 
+  /@vueuse/core/9.0.2_vue@3.2.37:
+    resolution: {integrity: sha512-kOIqaQPSs7OSByWg1ulEKRUJbsq3FmbJiUr0RhEKpt3O1Uhl4DrDj85DUbQBABVYgPvSaY6AE/fP3/FOcRIOoQ==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.15
+      '@vueuse/metadata': 9.0.2
+      '@vueuse/shared': 9.0.2_vue@3.2.37
+      vue-demi: 0.13.1_vue@3.2.37
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@vueuse/metadata/8.9.4:
     resolution: {integrity: sha512-IwSfzH80bnJMzqhaapqJl9JRIiyQU0zsRGEgnxN6jhq7992cPUJIRfV+JHRIZXjYqbwt07E1gTEp0R0zPJ1aqw==}
+    dev: true
+
+  /@vueuse/metadata/9.0.2:
+    resolution: {integrity: sha512-TRh+TNUYXiodatSAxd0xZc7sh4RfktVVgNFIN7TCQXKyancbCAcWfHvKfgdlX8LcqSBxKoHVa90n0XdUbboTkw==}
     dev: true
 
   /@vueuse/shared/8.9.4_vue@3.2.37:
@@ -939,6 +959,15 @@ packages:
     dependencies:
       vue: 3.2.37
       vue-demi: 0.13.1_vue@3.2.37
+    dev: true
+
+  /@vueuse/shared/9.0.2_vue@3.2.37:
+    resolution: {integrity: sha512-KwBDefK2ljLESpt0ffe2w8EGUCb3IaMfTzeytB/uHHjHOGOEIHLHHyn8W2C48uGQEvoe5iwaW4Bfp8cRUM6IFA==}
+    dependencies:
+      vue-demi: 0.13.1_vue@3.2.37
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.1:

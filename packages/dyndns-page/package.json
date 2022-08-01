@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "3.2.37",
-    "vue-i18n": "9.1.10"
+    "vue-i18n": "9.2.0"
   },
   "devDependencies": {
     "@vueuse/core": "8.9.4",

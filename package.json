@@ -31,7 +31,7 @@
     "taze:major:w": "npx taze major -r -w"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.26.0",
+    "@antfu/eslint-config": "0.26.1",
     "eslint": "8.21.0",
     "lint-staged": "13.0.3",
     "npm-run-all": "4.1.5",

@@ -21,7 +21,7 @@ importers:
   packages/dyndns-page:
     specifiers:
       '@vueuse/core': 8.9.4
-      autoprefixer: 10.4.10
+      autoprefixer: 10.4.11
       postcss: 8.4.16
       tailwindcss: 3.1.8
       typescript: 4.8.3
@@ -35,7 +35,7 @@ importers:
       vue-i18n: 9.2.2_vue@3.2.39
     devDependencies:
       '@vueuse/core': 8.9.4_vue@3.2.39
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.11_postcss@8.4.16
       postcss: 8.4.16
       tailwindcss: 3.1.8_postcss@8.4.16
       typescript: 4.8.3
@@ -1166,8 +1166,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /autoprefixer/10.4.10_postcss@8.4.16:
-    resolution: {integrity: sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==}
+  /autoprefixer/10.4.11_postcss@8.4.16:
+    resolution: {integrity: sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:

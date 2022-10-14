@@ -9,7 +9,7 @@
     "ts-check": "vue-tsc --noEmit && echo ok || echo not ok"
   },
   "dependencies": {
-    "vue": "3.2.40",
+    "vue": "3.2.41",
     "vue-i18n": "9.2.2"
   },
   "devDependencies": {

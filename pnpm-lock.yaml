@@ -23,7 +23,7 @@ importers:
       '@vueuse/core': 8.9.4
       autoprefixer: 10.4.13
       postcss: 8.4.19
-      tailwindcss: 3.2.3
+      tailwindcss: 3.2.4
       typescript: 4.8.4
       vite: 2.9.15
       vitepress: 1.0.0-alpha.28
@@ -37,7 +37,7 @@ importers:
       '@vueuse/core': 8.9.4_vue@3.2.45
       autoprefixer: 10.4.13_postcss@8.4.19
       postcss: 8.4.19
-      tailwindcss: 3.2.3_postcss@8.4.19
+      tailwindcss: 3.2.4_postcss@8.4.19
       typescript: 4.8.4
       vite: 2.9.15
       vitepress: 1.0.0-alpha.28
@@ -4059,8 +4059,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.2.3_postcss@8.4.19:
-    resolution: {integrity: sha512-Xt9D4PK4zuuQCEB8bwK9JUCKmTgUwyac/6b0/42Vqhgl6YJkep+Wf5wq+5uXYfmrupdAD0YY2NY1hyZp1HjRrg==}
+  /tailwindcss/3.2.4_postcss@8.4.19:
+    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

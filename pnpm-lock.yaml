@@ -46,12 +46,12 @@ importers:
   packages/dyndns-worker:
     specifiers:
       '@cloudflare/workers-types': 3.18.0
-      '@types/node': 18.11.13
+      '@types/node': 18.11.14
       typescript: 4.9.4
       wrangler: 2.6.2
     devDependencies:
       '@cloudflare/workers-types': 3.18.0
-      '@types/node': 18.11.13
+      '@types/node': 18.11.14
       typescript: 4.9.4
       wrangler: 2.6.2
 
@@ -838,7 +838,7 @@ packages:
   /@types/better-sqlite3/7.6.0:
     resolution: {integrity: sha512-rnSP9vY+fVsF3iJja5yRGBJV63PNBiezJlYrCkqUmQWFoB16cxAHwOkjsAYEu317miOfKaJpa65cbp0P4XJ/jw==}
     dependencies:
-      '@types/node': 18.11.13
+      '@types/node': 18.11.14
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -855,8 +855,8 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/18.11.13:
-    resolution: {integrity: sha512-IASpMGVcWpUsx5xBOrxMj7Bl8lqfuTY7FKAnPmu5cHkfQVWF8GulWS1jbRqA934qZL35xh5xN/+Xe/i26Bod4w==}
+  /@types/node/18.11.14:
+    resolution: {integrity: sha512-0KXV57tENYmmJMl+FekeW9V3O/rlcqGQQJ/hNh9r8pKIj304pskWuEd8fCyNT86g/TpO0gcOTiLzsHLEURFMIQ==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:

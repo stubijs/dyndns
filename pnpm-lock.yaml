@@ -26,7 +26,7 @@ importers:
       tailwindcss: 3.2.4
       typescript: 4.9.4
       vite: 2.9.15
-      vitepress: 1.0.0-alpha.41
+      vitepress: 1.0.0-alpha.43
       vue: 3.2.45
       vue-i18n: 9.2.2
       vue-tsc: 0.40.13
@@ -40,7 +40,7 @@ importers:
       tailwindcss: 3.2.4_postcss@8.4.21
       typescript: 4.9.4
       vite: 2.9.15
-      vitepress: 1.0.0-alpha.41
+      vitepress: 1.0.0-alpha.43
       vue-tsc: 0.40.13_typescript@4.9.4
 
   packages/dyndns-worker:
@@ -4504,8 +4504,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.41:
-    resolution: {integrity: sha512-fsSHCyxJVnAf4/BSxiZBoGaqFtdLurYDsL5qvZ3xXx6WO4WAqWuh5dX2ch1Gv0keMQkbiVcgkhln3bNiQqrulQ==}
+  /vitepress/1.0.0-alpha.43:
+    resolution: {integrity: sha512-bguPWYojF371vIfTY8jGmKeFroRe6UVGmDp3+PjTnVq57wTlz9x88OKm6KKF4l/1D7GugkHex5X9wNcOdCmCiQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.2

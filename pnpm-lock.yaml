@@ -51,8 +51,8 @@ importers:
         specifier: 2.9.15
         version: 2.9.15
       vitepress:
-        specifier: 1.0.0-alpha.66
-        version: 1.0.0-alpha.66(@algolia/client-search@4.13.1)
+        specifier: 1.0.0-alpha.69
+        version: 1.0.0-alpha.69(@algolia/client-search@4.13.1)
       vue-tsc:
         specifier: 0.40.13
         version: 0.40.13(typescript@4.9.5)
@@ -4791,8 +4791,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.66(@algolia/client-search@4.13.1):
-    resolution: {integrity: sha512-p/qaXDuaxukCj61WDaw4npoHuvuPmh/MiRzgOrlz08MjkSemaVXj7KAIdXXdBKl9ebMoxYhuH9hKzqaXn9a3kg==}
+  /vitepress@1.0.0-alpha.69(@algolia/client-search@4.13.1):
+    resolution: {integrity: sha512-d7Vz+S/1i/7szVUSOHJf12APtoGlHXIJXzDvXLChhlE000TVzWoYX6rUAchjJzfxdFjng3Eo96ZkPs7OJxDjMg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3

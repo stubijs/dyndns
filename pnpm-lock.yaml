@@ -48,8 +48,8 @@ importers:
         specifier: 4.9.5
         version: 4.9.5
       vite:
-        specifier: 4.3.8
-        version: 4.3.8
+        specifier: 4.3.9
+        version: 4.3.9
       vitepress:
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1(@algolia/client-search@4.13.1)
@@ -1284,14 +1284,14 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@vitejs/plugin-vue@4.2.3(vite@4.3.8)(vue@3.3.4):
+  /@vitejs/plugin-vue@4.2.3(vite@4.3.9)(vue@3.3.4):
     resolution: {integrity: sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.8
+      vite: 4.3.9
       vue: 3.3.4
     dev: true
 
@@ -4712,8 +4712,8 @@ packages:
       builtins: 5.0.1
     dev: true
 
-  /vite@4.3.8:
-    resolution: {integrity: sha512-uYB8PwN7hbMrf4j1xzGDk/lqjsZvCDbt/JC5dyfxc19Pg8kRm14LinK/uq+HSLNswZEoKmweGdtpbnxRtrAXiQ==}
+  /vite@4.3.9:
+    resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -4750,7 +4750,7 @@ packages:
     dependencies:
       '@docsearch/css': 3.3.5
       '@docsearch/js': 3.3.5(@algolia/client-search@4.13.1)
-      '@vitejs/plugin-vue': 4.2.3(vite@4.3.8)(vue@3.3.4)
+      '@vitejs/plugin-vue': 4.2.3(vite@4.3.9)(vue@3.3.4)
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.1.2(vue@3.3.4)
       '@vueuse/integrations': 10.1.2(focus-trap@7.4.2)(vue@3.3.4)
@@ -4759,7 +4759,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.2
-      vite: 4.3.8
+      vite: 4.3.9
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'

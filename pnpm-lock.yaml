@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -60,8 +64,8 @@ importers:
   packages/dyndns-worker:
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 3.19.0
-        version: 3.19.0
+        specifier: 4.20240320.1
+        version: 4.20240320.1
       '@types/node':
         specifier: 18.16.16
         version: 18.16.16
@@ -326,8 +330,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types@3.19.0:
-    resolution: {integrity: sha512-0FRcsz7Ea3jT+gc5gKPIYciykm1bbAaTpygdzpCwGt0RL+V83zWnYN30NWDW4rIHj/FHtz+MIuBKS61C8l7AzQ==}
+  /@cloudflare/workers-types@4.20240320.1:
+    resolution: {integrity: sha512-CiYtVpQURPgQqtBKkmOAnfPElVZuD7Xyf1IxKtKp2B4aB9gnooapwJhzeY8c4Ls4u17SgMS0MprOkrgYwzZ6xg==}
     dev: true
 
   /@docsearch/css@3.3.5:

@@ -53,10 +53,10 @@ importers:
         version: 4.9.5
       vite:
         specifier: 4.3.9
-        version: 4.3.9(@types/node@18.16.16)
+        version: 4.3.9(@types/node@18.19.31)
       vitepress:
         specifier: 1.0.0-beta.1
-        version: 1.0.0-beta.1(@algolia/client-search@4.13.1)(@types/node@18.16.16)(typescript@4.9.5)
+        version: 1.0.0-beta.1(@algolia/client-search@4.13.1)(@types/node@18.19.31)(typescript@4.9.5)
       vue-tsc:
         specifier: 0.40.13
         version: 0.40.13(typescript@4.9.5)
@@ -67,8 +67,8 @@ importers:
         specifier: 3.19.0
         version: 3.19.0
       '@types/node':
-        specifier: 18.16.16
-        version: 18.16.16
+        specifier: 18.19.31
+        version: 18.19.31
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -652,8 +652,8 @@ packages:
   '@types/mdast@3.0.10':
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
 
-  '@types/node@18.16.16':
-    resolution: {integrity: sha512-NpaM49IGQQAUlBhHMF82QH80J08os4ZmyF9MkpCzWAGuOHqE4gTEbhzd7L3l5LmWuZ6E0OiC1FweQ4tsiW35+g==}
+  '@types/node@18.19.31':
+    resolution: {integrity: sha512-ArgCD39YpyyrtFKIqMDvjz79jto5fcI/SVUs2HwB+f0dAzq68yqOdyaSivLiLugSziTpNXLQrVb7RZFmdZzbhA==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2549,6 +2549,9 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
   undici@5.20.0:
     resolution: {integrity: sha512-J3j60dYzuo6Eevbawwp1sdg16k5Tf768bxYK4TUJRH7cBM4kFCbf3mOnM/0E3vQYXvpxITbbWmBafaDbxLDz3g==}
     engines: {node: '>=12.18'}
@@ -3295,7 +3298,7 @@ snapshots:
 
   '@types/better-sqlite3@7.6.0':
     dependencies:
-      '@types/node': 18.16.16
+      '@types/node': 18.19.31
 
   '@types/json-schema@7.0.11': {}
 
@@ -3305,7 +3308,9 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.6
 
-  '@types/node@18.16.16': {}
+  '@types/node@18.19.31':
+    dependencies:
+      undici-types: 5.26.5
 
   '@types/normalize-package-data@2.4.1': {}
 
@@ -3403,9 +3408,9 @@ snapshots:
       '@typescript-eslint/types': 5.57.1
       eslint-visitor-keys: 3.4.1
 
-  '@vitejs/plugin-vue@4.2.3(vite@4.3.9(@types/node@18.16.16))(vue@3.4.23(typescript@4.9.5))':
+  '@vitejs/plugin-vue@4.2.3(vite@4.3.9(@types/node@18.19.31))(vue@3.4.23(typescript@4.9.5))':
     dependencies:
-      vite: 4.3.9(@types/node@18.16.16)
+      vite: 4.3.9(@types/node@18.19.31)
       vue: 3.4.23(typescript@4.9.5)
 
   '@volar/code-gen@0.40.13':
@@ -5418,6 +5423,8 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
+  undici-types@5.26.5: {}
+
   undici@5.20.0:
     dependencies:
       busboy: 1.6.0
@@ -5449,20 +5456,20 @@ snapshots:
     dependencies:
       builtins: 5.0.1
 
-  vite@4.3.9(@types/node@18.16.16):
+  vite@4.3.9(@types/node@18.19.31):
     dependencies:
       esbuild: 0.17.12
       postcss: 8.4.38
       rollup: 3.21.0
     optionalDependencies:
-      '@types/node': 18.16.16
+      '@types/node': 18.19.31
       fsevents: 2.3.2
 
-  vitepress@1.0.0-beta.1(@algolia/client-search@4.13.1)(@types/node@18.16.16)(typescript@4.9.5):
+  vitepress@1.0.0-beta.1(@algolia/client-search@4.13.1)(@types/node@18.19.31)(typescript@4.9.5):
     dependencies:
       '@docsearch/css': 3.3.5
       '@docsearch/js': 3.3.5(@algolia/client-search@4.13.1)
-      '@vitejs/plugin-vue': 4.2.3(vite@4.3.9(@types/node@18.16.16))(vue@3.4.23(typescript@4.9.5))
+      '@vitejs/plugin-vue': 4.2.3(vite@4.3.9(@types/node@18.19.31))(vue@3.4.23(typescript@4.9.5))
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.1.2(vue@3.4.23(typescript@4.9.5))
       '@vueuse/integrations': 10.1.2(focus-trap@7.4.2)(vue@3.4.23(typescript@4.9.5))
@@ -5471,7 +5478,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.2
-      vite: 4.3.9(@types/node@18.16.16)
+      vite: 4.3.9(@types/node@18.19.31)
       vue: 3.4.23(typescript@4.9.5)
     transitivePeerDependencies:
       - '@algolia/client-search'

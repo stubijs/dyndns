@@ -41,10 +41,10 @@ importers:
         version: 8.9.4(vue@3.4.23(typescript@4.9.5))
       autoprefixer:
         specifier: 10.4.20
-        version: 10.4.20(postcss@8.4.38)
+        version: 10.4.20(postcss@8.4.41)
       postcss:
-        specifier: 8.4.38
-        version: 8.4.38
+        specifier: 8.4.41
+        version: 8.4.41
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -56,7 +56,7 @@ importers:
         version: 4.5.3(@types/node@18.19.44)
       vitepress:
         specifier: 1.1.0
-        version: 1.1.0(@algolia/client-search@4.23.3)(@types/node@18.19.44)(postcss@8.4.38)(search-insights@2.13.0)(typescript@4.9.5)
+        version: 1.1.0(@algolia/client-search@4.23.3)(@types/node@18.19.44)(postcss@8.4.41)(search-insights@2.13.0)(typescript@4.9.5)
       vue-tsc:
         specifier: 0.40.13
         version: 0.40.13(typescript@4.9.5)
@@ -2466,8 +2466,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.4.38:
-    resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
+  postcss@8.4.41:
+    resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   preact@10.8.2:
@@ -3943,7 +3943,7 @@ snapshots:
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       magic-string: 0.30.0
-      postcss: 8.4.38
+      postcss: 8.4.41
       source-map-js: 1.2.0
 
   '@vue/compiler-sfc@3.4.23':
@@ -3955,7 +3955,7 @@ snapshots:
       '@vue/shared': 3.4.23
       estree-walker: 2.0.2
       magic-string: 0.30.9
-      postcss: 8.4.38
+      postcss: 8.4.41
       source-map-js: 1.2.0
 
   '@vue/compiler-ssr@3.3.4':
@@ -4171,14 +4171,14 @@ snapshots:
       es-abstract: 1.21.1
       es-shim-unscopables: 1.0.0
 
-  autoprefixer@10.4.20(postcss@8.4.38):
+  autoprefixer@10.4.20(postcss@8.4.41):
     dependencies:
       browserslist: 4.23.3
       caniuse-lite: 1.0.30001651
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
-      postcss: 8.4.38
+      postcss: 8.4.41
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.5: {}
@@ -5523,28 +5523,28 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  postcss-import@15.1.0(postcss@8.4.38):
+  postcss-import@15.1.0(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.41
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.2
 
-  postcss-js@4.0.1(postcss@8.4.38):
+  postcss-js@4.0.1(postcss@8.4.41):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.38
+      postcss: 8.4.41
 
-  postcss-load-config@4.0.1(postcss@8.4.38):
+  postcss-load-config@4.0.1(postcss@8.4.41):
     dependencies:
       lilconfig: 2.1.0
       yaml: 2.3.1
     optionalDependencies:
-      postcss: 8.4.38
+      postcss: 8.4.41
 
-  postcss-nested@6.0.1(postcss@8.4.38):
+  postcss-nested@6.0.1(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.38
+      postcss: 8.4.41
       postcss-selector-parser: 6.0.11
 
   postcss-selector-parser@6.0.11:
@@ -5554,10 +5554,10 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.4.38:
+  postcss@8.4.41:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.2.0
 
   preact@10.8.2: {}
@@ -5854,11 +5854,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.0
-      postcss: 8.4.38
-      postcss-import: 15.1.0(postcss@8.4.38)
-      postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.1(postcss@8.4.38)
-      postcss-nested: 6.0.1(postcss@8.4.38)
+      postcss: 8.4.41
+      postcss-import: 15.1.0(postcss@8.4.41)
+      postcss-js: 4.0.1(postcss@8.4.41)
+      postcss-load-config: 4.0.1(postcss@8.4.41)
+      postcss-nested: 6.0.1(postcss@8.4.41)
       postcss-selector-parser: 6.0.11
       resolve: 1.22.2
       sucrase: 3.32.0
@@ -5960,7 +5960,7 @@ snapshots:
   vite@4.5.3(@types/node@18.19.44):
     dependencies:
       esbuild: 0.18.20
-      postcss: 8.4.38
+      postcss: 8.4.41
       rollup: 3.29.4
     optionalDependencies:
       '@types/node': 18.19.44
@@ -5969,13 +5969,13 @@ snapshots:
   vite@5.2.9(@types/node@18.19.44):
     dependencies:
       esbuild: 0.20.2
-      postcss: 8.4.38
+      postcss: 8.4.41
       rollup: 4.14.3
     optionalDependencies:
       '@types/node': 18.19.44
       fsevents: 2.3.3
 
-  vitepress@1.1.0(@algolia/client-search@4.23.3)(@types/node@18.19.44)(postcss@8.4.38)(search-insights@2.13.0)(typescript@4.9.5):
+  vitepress@1.1.0(@algolia/client-search@4.23.3)(@types/node@18.19.44)(postcss@8.4.41)(search-insights@2.13.0)(typescript@4.9.5):
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
@@ -5993,7 +5993,7 @@ snapshots:
       vite: 5.2.9(@types/node@18.19.44)
       vue: 3.4.23(typescript@4.9.5)
     optionalDependencies:
-      postcss: 8.4.38
+      postcss: 8.4.41
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'

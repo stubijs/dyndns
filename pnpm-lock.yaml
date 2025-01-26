@@ -52,8 +52,8 @@ importers:
         specifier: 4.9.5
         version: 4.9.5
       vite:
-        specifier: 4.5.5
-        version: 4.5.5(@types/node@18.19.74)
+        specifier: 4.5.9
+        version: 4.5.9(@types/node@18.19.74)
       vitepress:
         specifier: 1.4.1
         version: 1.4.1(@algolia/client-search@4.23.3)(@types/node@18.19.74)(postcss@8.4.47)(search-insights@2.13.0)(typescript@4.9.5)
@@ -3076,8 +3076,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@4.5.5:
-    resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
+  vite@4.5.9:
+    resolution: {integrity: sha512-qK9W4xjgD3gXbC0NmdNFFnVFLMWSNiR3swj957yutwzzN16xF/E7nmtAyp1rT9hviDroQANjE4HK3H4WqWdFtw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -6476,7 +6476,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@4.5.5(@types/node@18.19.74):
+  vite@4.5.9(@types/node@18.19.74):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.47

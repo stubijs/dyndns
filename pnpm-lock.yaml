@@ -64,8 +64,8 @@ importers:
   packages/dyndns-worker:
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 3.19.0
-        version: 3.19.0
+        specifier: 4.20260117.0
+        version: 4.20260117.0
       '@types/node':
         specifier: 18.19.130
         version: 18.19.130
@@ -214,8 +214,8 @@ packages:
   '@cloudflare/kv-asset-handler@0.2.0':
     resolution: {integrity: sha512-MVbXLbTcAotOPUj0pAMhVtJ+3/kFkwJqc5qNOleOZTv6QkZZABDMS21dSrSlVswEHwrpWC03e4fWytjqKvuE2A==}
 
-  '@cloudflare/workers-types@3.19.0':
-    resolution: {integrity: sha512-0FRcsz7Ea3jT+gc5gKPIYciykm1bbAaTpygdzpCwGt0RL+V83zWnYN30NWDW4rIHj/FHtz+MIuBKS61C8l7AzQ==}
+  '@cloudflare/workers-types@4.20260117.0':
+    resolution: {integrity: sha512-hAoNGDHRv+BaMJEFx5Zl5B2nzDW0+fa9aocIjUxhBGAZlXpGXhogK2lxtzJ7G8GzrgfXv8VRMA0n+H3OTgsiHQ==}
 
   '@docsearch/css@3.8.2':
     resolution: {integrity: sha512-y05ayQFyUmCXze79+56v/4HpycYF3uFqB78pLPrSV5ZKAlDuIAAJNhaRi8tTdRNXh05yxX/TyNnzD6LwSM89vQ==}
@@ -3513,7 +3513,7 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@cloudflare/workers-types@3.19.0': {}
+  '@cloudflare/workers-types@4.20260117.0': {}
 
   '@docsearch/css@3.8.2': {}
 
